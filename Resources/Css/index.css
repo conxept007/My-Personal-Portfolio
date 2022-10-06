@@ -40,11 +40,11 @@ nav a {
     margin: auto auto;
 }
 
-ul {
+nav ul {
     margin-left: 45rem;
 }
 
-li {
+.navlist li {
     display: inline-block;
     margin-left: 1.8rem;
 }
@@ -164,42 +164,23 @@ footer {
 }
 
 /* For Contact.html */
+input, textarea{
+    background-color: rgb(212, 212, 214);
+    border: solid 1px blue;
+    border-radius: 5%;
+    font-family: cursive;
+    font-weight: 600;
+}
 input {
-    background-color: rgb(212, 212, 214);
     height: 2rem;
-    border: solid 1px blue;
-    border-radius: 5%;
-    font-family: cursive;
-    font-weight: 600;
 }
-input:hover {
+input:hover, textarea:hover {
     background-color: aliceblue;
     border: solid 1px red;
 }
-input:active {
+input:active, textarea:active {
     background-color: white;
     border: solid 1px blue;
-}
-
-textarea {
-    background-color: rgb(212, 212, 214);
-    border: solid 1px blue;
-    border-radius: 5%;
-    font-family: cursive;
-    font-weight: 600;
-}
-textarea:hover {
-    background-color: aliceblue;
-    border: solid 1px red;
-}
-textarea:active {
-    background-color: white;
-    border: solid 1px blue;
-}
-
-
-section {
-    width: 100%;
 }
 
 form {
@@ -216,6 +197,7 @@ form {
 }
 
 /* Poetry */
+
 .poetry .poet {
     top: -100%;
     position: fixed;
@@ -226,4 +208,73 @@ form {
     top: 5rem;
     background-color: rgb(118, 118, 248);
     width: 80%;
+}
+
+/* FOR DIFFERENT SCREEN SIZES */
+
+@media only screen and (max-width: 480px) {
+    .bodyA {
+        display: block;
+        width: 90%;
+        padding-left: 1rem;
+        margin-top: 5rem;
+    }
+
+    h1 {
+        font-size: 3.2rem;
+    }
+
+    h3 {
+        font-size: 1.8rem;
+    }
+
+    .poetry .poet {
+        top: -200%;
+        position: fixed;
+    }
+
+    img {
+        width: 10rem;
+        height: 10rem;
+        margin-left: 3rem;
+        border-radius: 0rem;
+        border: none;
+    }
+
+    nav ul {
+        margin-left: 1rem;
+    }
+
+    .navlist li {
+        margin-left: 1.3rem;
+    }
+
+    figure div {
+        display: grid;
+        grid-template: 1fr / 1fr 1fr 1fr 1fr;
+    }
+
+    p {
+        padding: 0rem 0rem 1rem 1rem;
+        width: 90%;
+    }
+
+    .num p {
+        margin: 1rem auto;
+    }
+
+
+
+    .bodyAC img{
+        display: none;
+    }
+
+    .bodyAC {
+        grid-template: 1fr / 1fr;
+    }
+
+    form {
+        margin: 0 auto 1.5rem;
+        text-align: center;
+    }
 }
